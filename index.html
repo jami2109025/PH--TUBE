@@ -23,8 +23,17 @@
     <header>
         <nav class="w-11/12 m-auto flex justify-between py-5 border-b-2 border-gray-100">
             <div class="logo"><img src="assets/Logo.png" alt=""></div>
-            <div class=" btn sort bg-[#25252520]">Sort by View</div>
-            <div class="blog btn bg-[#FF1F3D] text-white ">Blog</div>
+            <label class="input">
+                <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
+                        stroke="currentColor">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                    </g>
+                </svg>
+                <input id="search-input" type="search" required placeholder="Search" />
+            </label>
+            <div class="blog btn bg-[#FF1F3D] text-white ">Sort by View</div>
         </nav>
     </header>
 
@@ -34,6 +43,9 @@
         </div>
     </nav>
 
+    <section id="loader" class="text-center py-10">
+        <span class="loading loading-dots loading-xl"></span>
+    </section>
 
     <section id="video-container" class="w-11/12 m-auto grid grid-cols-4 gap-5">
         <div class="col-span-full text-center flex flex-col justify-center items-center py-25">
@@ -46,8 +58,9 @@
     <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
     <dialog id="video_details" class="modal">
         <div class="modal-box">
-            <h3 class="text-lg font-bold">Hello!</h3>
-            <p class="py-4">Press ESC key or click the button below to close</p>
+            <div id="details-container">
+
+            </div>
             <div class="modal-action">
                 <form method="dialog">
                     <!-- if there is a button in form, it will close the modal -->
